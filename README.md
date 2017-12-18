@@ -3,7 +3,8 @@
 **12/18/2017 update**
 * Created site layout
 * Nothing really functional yet, just an update to the old look
-* Scales well on phones - ![screenshot](Intranet/wwwroot/images/phone-screenshot.png)
+* Scales well on phones
+    * ![screenshot](Intranet/wwwroot/images/phone-screenshot.png)
 * Hosting the development server on my laptop in ACS office
     * http://bfairburn3:6699
 ----------------------
