@@ -41,5 +41,5 @@ or use the site navigation to download code as a .zip. Open solution in Visual S
 >![screenshot](Intranet/wwwroot/images/screenshots/desktop.png)
 
 **Mobile**
->![screenshot](Intranet/wwwroot/images/screenshots/phone.png)
-mobile GIF demo [here](Intranet/wwwroot/images/screenshots/phone-animated.gif)
+>[![screenshot](Intranet/wwwroot/images/screenshots/phone.png)](Intranet/wwwroot/images/screenshots/phone-animated.gif)
+click mobile screenshot for GIF demo
