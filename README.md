@@ -12,7 +12,7 @@
 ## Build Instructions
 Clone repo  
 
-> `git clone https://acscode.visualstudio.com/_git/acs-intranet`
+> `git clone https://acscode.visualstudio.com/_git/ACS%20Intranet`
 
 or use the site navigation to download code as a .zip. Open solution in Visual Studio 2017 and build/run in debug mode to test. Details on deploying to IIS can be found [here](https://docs.microsoft.com/en-us/aspnet/core/publishing/iis?tabs=aspnetcore2x).
 
