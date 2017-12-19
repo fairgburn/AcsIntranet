@@ -1,4 +1,4 @@
-﻿# **ACS Intranet**
+﻿# **ACS Intranet** | [source code](https://acscode.visualstudio.com/_git/ACS%20Intranet)
 
 **12/18/2017 update**
 * Created site layout
@@ -66,9 +66,9 @@ Visual Studio also provides tools to do all this graphically if you prefer that 
 ----------------------
 
 ## Screenshots
-**Desktop**
+### Desktop
 >![screenshot](Intranet/wwwroot/images/screenshots/desktop.png)
 
-**Mobile**
+### Mobile
+*click screenshot for GIF demo*
 >[![screenshot](Intranet/wwwroot/images/screenshots/phone.png)](Intranet/wwwroot/images/screenshots/phone-animated.gif)  
-click mobile screenshot for GIF demo
