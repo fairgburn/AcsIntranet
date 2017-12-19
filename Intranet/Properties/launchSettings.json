@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "QuotationSystem": {
+    "Intranet": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
