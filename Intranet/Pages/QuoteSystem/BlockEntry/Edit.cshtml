@@ -1,0 +1,66 @@
+﻿@page
+@model Intranet.Pages.QuoteSystem.BlockEntry.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Pages/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+<h4>Block</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Block.BlockName" />
+            <div class="form-group">
+                <label asp-for="Block.PartNumber" class="control-label"></label>
+                <input asp-for="Block.PartNumber" class="form-control" />
+                <span asp-validation-for="Block.PartNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Block.Description" class="control-label"></label>
+                <input asp-for="Block.Description" class="form-control" />
+                <span asp-validation-for="Block.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Block.Price" class="control-label"></label>
+                <input asp-for="Block.Price" class="form-control" />
+                <span asp-validation-for="Block.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Block.Qflag" class="control-label"></label>
+                <input asp-for="Block.Qflag" class="form-control" />
+                <span asp-validation-for="Block.Qflag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Block.Class" class="control-label"></label>
+                <input asp-for="Block.Class" class="form-control" />
+                <span asp-validation-for="Block.Class" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Block.SpecNumber" class="control-label"></label>
+                <input asp-for="Block.SpecNumber" class="form-control" />
+                <span asp-validation-for="Block.SpecNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Block.InsertionPoint" class="control-label"></label>
+                <input asp-for="Block.InsertionPoint" class="form-control" />
+                <span asp-validation-for="Block.InsertionPoint" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
