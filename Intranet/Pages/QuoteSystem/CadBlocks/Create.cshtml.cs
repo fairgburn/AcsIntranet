@@ -34,6 +34,8 @@ namespace Intranet.Pages.QuoteSystem.BlockEntry
                 return Page();
             }
 
+            Block.Date = DateTime.Now;
+
             _context.Blocks.Add(Block);
             await _context.SaveChangesAsync();
 

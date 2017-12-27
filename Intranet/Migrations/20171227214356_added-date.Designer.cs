@@ -11,9 +11,10 @@ using System;
 namespace AcsIntranet.Migrations
 {
     [DbContext(typeof(QuoteSystemContext))]
-    partial class QuoteSystemContextModelSnapshot : ModelSnapshot
+    [Migration("20171227214356_added-date")]
+    partial class addeddate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -26,8 +27,6 @@ namespace AcsIntranet.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<int>("Class");
-
-                    b.Property<string>("Creator");
 
                     b.Property<DateTime>("Date");
 

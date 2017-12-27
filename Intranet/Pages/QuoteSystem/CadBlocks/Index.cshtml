@@ -6,40 +6,43 @@
     Layout = "~/Pages/_Layout.cshtml";
 }
 
-<h2>Block Entry</h2>
+<h2>AutoCAD Blocks</h2>
 
 <p>
     <a asp-page="Create">Create New</a>
+</p>
+<p>
+    <
 </p>
 <table class="table">
     <thead>
         <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.Block[0].PartNumber)
+                    @Html.DisplayNameFor(model => model.Blocks[0].PartNumber)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Block[0].Description)
+                    @Html.DisplayNameFor(model => model.Blocks[0].Description)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Block[0].Price)
+                    @Html.DisplayNameFor(model => model.Blocks[0].Price)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Block[0].Qflag)
+                    @Html.DisplayNameFor(model => model.Blocks[0].Qflag)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Block[0].Class)
+                    @Html.DisplayNameFor(model => model.Blocks[0].Class)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Block[0].SpecNumber)
+                    @Html.DisplayNameFor(model => model.Blocks[0].SpecNumber)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Block[0].InsertionPoint)
+                    @Html.DisplayNameFor(model => model.Blocks[0].InsertionPoint)
                 </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Block) {
+@foreach (var item in Model.Blocks) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.PartNumber)

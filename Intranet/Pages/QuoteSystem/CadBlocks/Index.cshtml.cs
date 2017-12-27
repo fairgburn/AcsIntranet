@@ -19,11 +19,11 @@ namespace Intranet.Pages.QuoteSystem.BlockEntry
             _context = context;
         }
 
-        public IList<Block> Block { get;set; }
+        public IList<Block> Blocks { get;set; }
 
         public async Task OnGetAsync()
         {
-            Block = await _context.Blocks.ToListAsync();
+            Blocks = await _context.Blocks.ToListAsync();
         }
     }
 }
