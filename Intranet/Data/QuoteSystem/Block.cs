@@ -24,7 +24,8 @@ namespace AcsIntranet.Data.QuoteSystem
         
         [DataType(DataType.Currency)]
         public decimal Price { get; set; }
-        
+
+        [Display(Name = "Q-Flag")]
         public int Qflag { get; set; }
         
         public int Class { get; set; }

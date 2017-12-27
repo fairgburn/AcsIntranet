@@ -9,68 +9,76 @@
 <h2>AutoCAD Blocks</h2>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create"><strong>+</strong> Create New</a>
 </p>
-<p>
-    <
-</p>
+
+<div class="form-group form-group-sm">
+    <form>
+        <p>
+            <input type="text" name="blockName" class="form-control" placeholder="Search by block name..." />
+            <input type="submit" value="Filter" class="btn btn-default" />
+        </p>
+    </form>
+</div>
+
 <table class="table">
     <thead>
         <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Blocks[0].PartNumber)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Blocks[0].Description)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Blocks[0].Price)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Blocks[0].Qflag)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Blocks[0].Class)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Blocks[0].SpecNumber)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Blocks[0].InsertionPoint)
-                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Blocks[0].PartNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Blocks[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Blocks[0].Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Blocks[0].Qflag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Blocks[0].Class)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Blocks[0].SpecNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Blocks[0].InsertionPoint)
+            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Blocks) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.PartNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Qflag)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Class)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SpecNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.InsertionPoint)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.BlockName">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.BlockName">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.BlockName">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Blocks)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PartNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Qflag)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Class)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SpecNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.InsertionPoint)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.BlockName">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.BlockName">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.BlockName">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
