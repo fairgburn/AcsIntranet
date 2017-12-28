@@ -8,7 +8,7 @@ namespace AcsIntranet.Data
 {
     public class QuoteSystemContext : DbContext
     {
-        public DbSet<QuoteSystem.Block> Blocks { get; set; }
+        public DbSet<QuoteSystem.BlockModel> Blocks { get; set; }
 
         public QuoteSystemContext(DbContextOptions<QuoteSystemContext> options) : base(options) { }
 

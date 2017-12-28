@@ -1,5 +1,5 @@
 ﻿@page
-@model Intranet.Pages.QuoteSystem.BlockEntry.EditModel
+@model Intranet.Pages.QuoteSystem.CadBlocks.EditModel
 
 @{
     ViewData["Title"] = "Edit";
@@ -8,47 +8,52 @@
 
 <h2>Edit</h2>
 
-<h4>Block</h4>
+<h4>BlockModel</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Block.BlockName" />
+            <input type="hidden" asp-for="BlockModel.ID" />
             <div class="form-group">
-                <label asp-for="Block.PartNumber" class="control-label"></label>
-                <input asp-for="Block.PartNumber" class="form-control" />
-                <span asp-validation-for="Block.PartNumber" class="text-danger"></span>
+                <label asp-for="BlockModel.BlockName" class="control-label"></label>
+                <input asp-for="BlockModel.BlockName" class="form-control" />
+                <span asp-validation-for="BlockModel.BlockName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Block.Description" class="control-label"></label>
-                <input asp-for="Block.Description" class="form-control" />
-                <span asp-validation-for="Block.Description" class="text-danger"></span>
+                <label asp-for="BlockModel.PartNumber" class="control-label"></label>
+                <input asp-for="BlockModel.PartNumber" class="form-control" />
+                <span asp-validation-for="BlockModel.PartNumber" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Block.Price" class="control-label"></label>
-                <input asp-for="Block.Price" class="form-control" />
-                <span asp-validation-for="Block.Price" class="text-danger"></span>
+                <label asp-for="BlockModel.Description" class="control-label"></label>
+                <input asp-for="BlockModel.Description" class="form-control" />
+                <span asp-validation-for="BlockModel.Description" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Block.Qflag" class="control-label"></label>
-                <input asp-for="Block.Qflag" class="form-control" />
-                <span asp-validation-for="Block.Qflag" class="text-danger"></span>
+                <label asp-for="BlockModel.Price" class="control-label"></label>
+                <input asp-for="BlockModel.Price" class="form-control" />
+                <span asp-validation-for="BlockModel.Price" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Block.Class" class="control-label"></label>
-                <input asp-for="Block.Class" class="form-control" />
-                <span asp-validation-for="Block.Class" class="text-danger"></span>
+                <label asp-for="BlockModel.Qflag" class="control-label"></label>
+                <input asp-for="BlockModel.Qflag" class="form-control" />
+                <span asp-validation-for="BlockModel.Qflag" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Block.SpecNumber" class="control-label"></label>
-                <input asp-for="Block.SpecNumber" class="form-control" />
-                <span asp-validation-for="Block.SpecNumber" class="text-danger"></span>
+                <label asp-for="BlockModel.Class" class="control-label"></label>
+                <input asp-for="BlockModel.Class" class="form-control" />
+                <span asp-validation-for="BlockModel.Class" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Block.InsertionPoint" class="control-label"></label>
-                <input asp-for="Block.InsertionPoint" class="form-control" />
-                <span asp-validation-for="Block.InsertionPoint" class="text-danger"></span>
+                <label asp-for="BlockModel.SpecNumber" class="control-label"></label>
+                <input asp-for="BlockModel.SpecNumber" class="form-control" />
+                <span asp-validation-for="BlockModel.SpecNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlockModel.InsertionPoint" class="control-label"></label>
+                <input asp-for="BlockModel.InsertionPoint" class="form-control" />
+                <span asp-validation-for="BlockModel.InsertionPoint" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-default" />

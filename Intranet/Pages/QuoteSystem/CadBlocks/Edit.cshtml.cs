@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using AcsIntranet.Data;
 using AcsIntranet.Data.QuoteSystem;
 
-namespace Intranet.Pages.QuoteSystem.BlockEntry
+namespace Intranet.Pages.QuoteSystem.CadBlocks
 {
     public class EditModel : PageModel
     {
@@ -21,18 +21,18 @@ namespace Intranet.Pages.QuoteSystem.BlockEntry
         }
 
         [BindProperty]
-        public Block Block { get; set; }
+        public BlockModel BlockModel { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(string id)
+        public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            Block = await _context.Blocks.SingleOrDefaultAsync(m => m.BlockName == id);
+            BlockModel = await _context.Blocks.SingleOrDefaultAsync(m => m.ID == id);
 
-            if (Block == null)
+            if (BlockModel == null)
             {
                 return NotFound();
             }
@@ -46,7 +46,7 @@ namespace Intranet.Pages.QuoteSystem.BlockEntry
                 return Page();
             }
 
-            _context.Attach(Block).State = EntityState.Modified;
+            _context.Attach(BlockModel).State = EntityState.Modified;
 
             try
             {
@@ -54,7 +54,7 @@ namespace Intranet.Pages.QuoteSystem.BlockEntry
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!BlockExists(Block.BlockName))
+                if (!BlockModelExists(BlockModel.ID))
                 {
                     return NotFound();
                 }
@@ -67,9 +67,9 @@ namespace Intranet.Pages.QuoteSystem.BlockEntry
             return RedirectToPage("./Index");
         }
 
-        private bool BlockExists(string id)
+        private bool BlockModelExists(int id)
         {
-            return _context.Blocks.Any(e => e.BlockName == id);
+            return _context.Blocks.Any(e => e.ID == id);
         }
     }
 }

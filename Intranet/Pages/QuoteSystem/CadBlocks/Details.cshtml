@@ -1,5 +1,5 @@
 ﻿@page
-@model Intranet.Pages.QuoteSystem.BlockEntry.DetailsModel
+@model Intranet.Pages.QuoteSystem.CadBlocks.DetailsModel
 
 @{
     ViewData["Title"] = "Details";
@@ -9,54 +9,72 @@
 <h2>Details</h2>
 
 <div>
-    <h4>Block</h4>
+    <h4>BlockModel</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Block.PartNumber)
+            @Html.DisplayNameFor(model => model.BlockModel.BlockName)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Block.PartNumber)
+            @Html.DisplayFor(model => model.BlockModel.BlockName)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Block.Description)
+            @Html.DisplayNameFor(model => model.BlockModel.PartNumber)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Block.Description)
+            @Html.DisplayFor(model => model.BlockModel.PartNumber)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Block.Price)
+            @Html.DisplayNameFor(model => model.BlockModel.Description)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Block.Price)
+            @Html.DisplayFor(model => model.BlockModel.Description)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Block.Qflag)
+            @Html.DisplayNameFor(model => model.BlockModel.Price)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Block.Qflag)
+            @Html.DisplayFor(model => model.BlockModel.Price)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Block.Class)
+            @Html.DisplayNameFor(model => model.BlockModel.Qflag)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Block.Class)
+            @Html.DisplayFor(model => model.BlockModel.Qflag)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Block.SpecNumber)
+            @Html.DisplayNameFor(model => model.BlockModel.Class)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Block.SpecNumber)
+            @Html.DisplayFor(model => model.BlockModel.Class)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Block.InsertionPoint)
+            @Html.DisplayNameFor(model => model.BlockModel.SpecNumber)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Block.InsertionPoint)
+            @Html.DisplayFor(model => model.BlockModel.SpecNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BlockModel.InsertionPoint)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BlockModel.InsertionPoint)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BlockModel.Date)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BlockModel.Date)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BlockModel.Creator)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BlockModel.Creator)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Block.BlockName">Edit</a> |
+    <a asp-page="./Edit" asp-route-id="@Model.BlockModel.ID">Edit</a> |
     <a asp-page="./Index">Back to List</a>
 </div>

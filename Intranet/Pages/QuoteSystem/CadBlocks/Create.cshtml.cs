@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using AcsIntranet.Data;
 using AcsIntranet.Data.QuoteSystem;
 
-namespace Intranet.Pages.QuoteSystem.BlockEntry
+namespace Intranet.Pages.QuoteSystem.CadBlocks
 {
     public class CreateModel : PageModel
     {
@@ -25,7 +25,7 @@ namespace Intranet.Pages.QuoteSystem.BlockEntry
         }
 
         [BindProperty]
-        public Block Block { get; set; }
+        public BlockModel BlockModel { get; set; }
 
         public async Task<IActionResult> OnPostAsync()
         {
@@ -34,9 +34,10 @@ namespace Intranet.Pages.QuoteSystem.BlockEntry
                 return Page();
             }
 
-            Block.Date = DateTime.Now;
+            BlockModel.Date = DateTime.Now;
+            BlockModel.Creator = User.Identity.ToString();
 
-            _context.Blocks.Add(Block);
+            _context.Blocks.Add(BlockModel);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

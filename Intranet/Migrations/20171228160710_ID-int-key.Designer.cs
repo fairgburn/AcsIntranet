@@ -11,8 +11,8 @@ using System;
 namespace AcsIntranet.Migrations
 {
     [DbContext(typeof(QuoteSystemContext))]
-    [Migration("20171227214822_added-creator")]
-    partial class addedcreator
+    [Migration("20171228160710_ID-int-key")]
+    partial class IDintkey
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,8 +23,10 @@ namespace AcsIntranet.Migrations
 
             modelBuilder.Entity("AcsIntranet.Data.QuoteSystem.Block", b =>
                 {
-                    b.Property<string>("BlockName")
+                    b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<string>("BlockName");
 
                     b.Property<int>("Class");
 
@@ -44,7 +46,7 @@ namespace AcsIntranet.Migrations
 
                     b.Property<int>("SpecNumber");
 
-                    b.HasKey("BlockName");
+                    b.HasKey("ID");
 
                     b.ToTable("Blocks");
                 });

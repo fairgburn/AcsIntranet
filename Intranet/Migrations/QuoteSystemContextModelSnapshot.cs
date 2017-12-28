@@ -22,8 +22,10 @@ namespace AcsIntranet.Migrations
 
             modelBuilder.Entity("AcsIntranet.Data.QuoteSystem.Block", b =>
                 {
-                    b.Property<string>("BlockName")
+                    b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<string>("BlockName");
 
                     b.Property<int>("Class");
 
@@ -43,7 +45,7 @@ namespace AcsIntranet.Migrations
 
                     b.Property<int>("SpecNumber");
 
-                    b.HasKey("BlockName");
+                    b.HasKey("ID");
 
                     b.ToTable("Blocks");
                 });

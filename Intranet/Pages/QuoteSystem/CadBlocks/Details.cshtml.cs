@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using AcsIntranet.Data;
 using AcsIntranet.Data.QuoteSystem;
 
-namespace Intranet.Pages.QuoteSystem.BlockEntry
+namespace Intranet.Pages.QuoteSystem.CadBlocks
 {
     public class DetailsModel : PageModel
     {
@@ -19,18 +19,18 @@ namespace Intranet.Pages.QuoteSystem.BlockEntry
             _context = context;
         }
 
-        public Block Block { get; set; }
+        public BlockModel BlockModel { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(string id)
+        public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            Block = await _context.Blocks.SingleOrDefaultAsync(m => m.BlockName == id);
+            BlockModel = await _context.Blocks.SingleOrDefaultAsync(m => m.ID == id);
 
-            if (Block == null)
+            if (BlockModel == null)
             {
                 return NotFound();
             }

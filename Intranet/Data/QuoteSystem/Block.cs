@@ -11,10 +11,12 @@ namespace AcsIntranet.Data.QuoteSystem
     /// <summary>
     /// Represents a block in AutoCAD
     /// </summary>
-    public class Block
+    public class BlockModel
     {
-        [Display(Name = "Block Name")]
         [Key]
+        public int ID { get; set; }
+
+        [Display(Name = "Block Name")]
         public string BlockName { get; set; }
 
         [Display(Name = "Part Number")]
