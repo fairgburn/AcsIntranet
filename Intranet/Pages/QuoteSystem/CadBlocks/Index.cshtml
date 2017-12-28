@@ -41,9 +41,6 @@
                 <th>
                     @Html.DisplayNameFor(model => model.BlockModel[0].Date)
                 </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.BlockModel[0].Creator)
-                </th>
             <th></th>
         </tr>
     </thead>
@@ -76,9 +73,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Creator)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |

@@ -41,6 +41,5 @@ namespace AcsIntranet.Data.QuoteSystem
 
         public DateTime Date { get; set; }
 
-        public string Creator { get; set; }
     }
 }

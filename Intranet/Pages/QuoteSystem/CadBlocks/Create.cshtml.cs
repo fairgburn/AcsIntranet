@@ -35,7 +35,6 @@ namespace Intranet.Pages.QuoteSystem.CadBlocks
             }
 
             BlockModel.Date = DateTime.Now;
-            BlockModel.Creator = User.Identity.ToString();
 
             _context.Blocks.Add(BlockModel);
             await _context.SaveChangesAsync();
