@@ -1,0 +1,70 @@
+﻿@page
+@model Intranet.Pages.QuoteSystem.CadBlocks.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Pages/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+<h4>BlockModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="BlockModel.BlockName" class="control-label"></label>
+                <input asp-for="BlockModel.BlockName" class="form-control" />
+                <span asp-validation-for="BlockModel.BlockName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlockModel.PartNumber" class="control-label"></label>
+                <input asp-for="BlockModel.PartNumber" class="form-control" />
+                <span asp-validation-for="BlockModel.PartNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlockModel.Description" class="control-label"></label>
+                <input asp-for="BlockModel.Description" class="form-control" />
+                <span asp-validation-for="BlockModel.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlockModel.Price" class="control-label"></label>
+                <input asp-for="BlockModel.Price" class="form-control" />
+                <span asp-validation-for="BlockModel.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlockModel.Qflag" class="control-label"></label>
+                <input asp-for="BlockModel.Qflag" class="form-control" />
+                <span asp-validation-for="BlockModel.Qflag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlockModel.Class" class="control-label"></label>
+                <input asp-for="BlockModel.Class" class="form-control" />
+                <span asp-validation-for="BlockModel.Class" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlockModel.SpecNumber" class="control-label"></label>
+                <input asp-for="BlockModel.SpecNumber" class="form-control" />
+                <span asp-validation-for="BlockModel.SpecNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlockModel.InsertionPoint" class="control-label"></label>
+                <input asp-for="BlockModel.InsertionPoint" class="form-control" />
+                <span asp-validation-for="BlockModel.InsertionPoint" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace AcsIntranet
 {
@@ -22,6 +24,10 @@ namespace AcsIntranet
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            // add the Postgres EF Core provider
+            var connectionString = Configuration.GetConnectionString("QuoteSystemContext");
+            services.AddEntityFrameworkNpgsql().AddDbContext<Data.QuoteSystemContext>(options => options.UseNpgsql(connectionString));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
